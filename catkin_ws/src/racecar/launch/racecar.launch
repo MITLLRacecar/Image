@@ -1,0 +1,6 @@
+<launch>
+  <!-- Launch the racecar base program -->
+  <node pkg="joy" type="joy_node" name="joy_node" />
+  <node pkg="racecar" name="pwm" type="pwm.py" output="screen" />
+
+</launch>
