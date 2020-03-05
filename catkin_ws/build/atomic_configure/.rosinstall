@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/racecar/RacecarRosImage/catkin_ws/devel/setup.sh
+    local-name: /home/racecar/Image/catkin_ws/devel/setup.sh

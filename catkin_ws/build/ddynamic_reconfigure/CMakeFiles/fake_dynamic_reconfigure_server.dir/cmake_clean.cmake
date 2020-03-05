@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fake_dynamic_reconfigure_server.dir/test/fake_dynamic_reconfigure_server.cpp.o"
-  "/home/racecar/RacecarRosImage/catkin_ws/devel/lib/ddynamic_reconfigure/fake_dynamic_reconfigure_server.pdb"
-  "/home/racecar/RacecarRosImage/catkin_ws/devel/lib/ddynamic_reconfigure/fake_dynamic_reconfigure_server"
+  "/home/racecar/Image/catkin_ws/devel/lib/ddynamic_reconfigure/fake_dynamic_reconfigure_server.pdb"
+  "/home/racecar/Image/catkin_ws/devel/lib/ddynamic_reconfigure/fake_dynamic_reconfigure_server"
 )
 
 # Per-language clean rules from dependency scanning.

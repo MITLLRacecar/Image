@@ -9,10 +9,7 @@ from std_msgs.msg import String
 import time
 
 CAR_MAX_SPEED = 1.0
-CAR_THROTTLE_SPEED = 0.25
-CAR_MAX_TURN = 0.4
-CAR_THROTTLE_TURN = 0.5
-STEERING_CENTER_REL_OFFSET = 0
+CAR_MAX_TURN = 1.0
 
 PWM_SPEED_MAX = 9000
 PWM_SPEED_MIN = 3000
@@ -57,17 +54,17 @@ def motor_callback(msg):
     """
     global controller
 
-    velocity_signal = int(remap_to_range(msg.drive.speed*CAR_THROTTLE_SPEED, \
+    velocity_signal = int(remap_to_range(msg.drive.speed, \
             -CAR_MAX_SPEED, CAR_MAX_SPEED, PWM_SPEED_MIN, PWM_SPEED_MAX))
     
-    turn_signal = int(remap_to_range(msg.drive.steering_angle*CAR_THROTTLE_TURN, \
+    turn_signal = int(remap_to_range(msg.drive.steering_angle, \
             -CAR_MAX_TURN, CAR_MAX_TURN, PWM_TURN_LEFT, PWM_TURN_RIGHT))
     
     # Set drive speed
     controller.setTarget(PWM_SPEED_CHANNEL, velocity_signal)
 
     # Set drive angle
-    controller.setTarget(PWM_TURN_CHANNEL, turn_signal+STEERING_CENTER_REL_OFFSET)
+    controller.setTarget(PWM_TURN_CHANNEL, turn_signal)
     
     pwm_debug_channel.publish(  "Velocity Signal: " + \
                                 str(velocity_signal) + " | "\

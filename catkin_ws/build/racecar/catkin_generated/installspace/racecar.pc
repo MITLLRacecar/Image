@@ -1,4 +1,4 @@
-prefix=/home/racecar/RacecarRosImage/catkin_ws/install
+prefix=/home/racecar/Image/catkin_ws/install
 
 Name: racecar
 Description: Description of racecar
