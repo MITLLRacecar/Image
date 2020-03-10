@@ -17,6 +17,8 @@ PWM_SPEED_CHANNEL = 0
 
 PWM_TURN_LEFT = 9000
 PWM_TURN_RIGHT = 3000
+PWM_TURN_LEFT_CAP = 8000
+PWM_TURN_RIGHT_CAP = 4000
 PWM_TURN_CHANNEL = 1
 
 pwm_debug_channel = rospy.Publisher("/pwm_debug", String, queue_size=1)
@@ -58,7 +60,7 @@ def motor_callback(msg):
             -CAR_MAX_SPEED, CAR_MAX_SPEED, PWM_SPEED_MIN, PWM_SPEED_MAX))
     
     turn_signal = int(remap_to_range(msg.drive.steering_angle, \
-            -CAR_MAX_TURN, CAR_MAX_TURN, PWM_TURN_LEFT, PWM_TURN_RIGHT))
+            -CAR_MAX_TURN, CAR_MAX_TURN, PWM_TURN_LEFT_CAP, PWM_TURN_RIGHT_CAP))
     
     # Set drive speed
     controller.setTarget(PWM_SPEED_CHANNEL, velocity_signal)
