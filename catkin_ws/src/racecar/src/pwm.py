@@ -30,12 +30,12 @@ def motor_callback(msg):
     controller.setTarget(PWM_SPEED_CHANNEL, int(msg.drive.speed))
 
     # Set drive angle
-    controller.setTarget(PWM_TURN_CHANNEL, int(msg.drive.turn))
+    controller.setTarget(PWM_TURN_CHANNEL, int(msg.drive.steering_angle))
     
     pwm_debug_channel.publish(  "Velocity Signal: " + \
-                                str(velocity_signal) + " | "\
+                                str(msg.drive.speed) + " | "\
                                 "Turn Signal: " + \
-                                str(turn_signal))
+                                str(msg.drive.steering_angle))
 
 
 
