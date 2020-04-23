@@ -1,2 +1,2 @@
-racecar:ydlidar_ros
+laser_values:racecar:ydlidar_ros
 -DCATKIN_DEVEL_PREFIX=/home/racecar/Image/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/racecar/Image/catkin_ws/install -G Unix Makefiles
