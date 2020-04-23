@@ -7,4 +7,5 @@
 # new environment variables
 
 # modified environment variables
+export PATH="/opt/ros/melodic/bin:/home/racecar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/racecar/.local/bin"
 export PWD="/home/racecar/Image/catkin_ws/build"

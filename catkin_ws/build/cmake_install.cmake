@@ -131,10 +131,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/racecar/Image/catkin_ws/build/gtest/cmake_install.cmake")
-  include("/home/racecar/Image/catkin_ws/build/realsense-ros/realsense2_description/cmake_install.cmake")
-  include("/home/racecar/Image/catkin_ws/build/ddynamic_reconfigure/cmake_install.cmake")
   include("/home/racecar/Image/catkin_ws/build/racecar/cmake_install.cmake")
-  include("/home/racecar/Image/catkin_ws/build/realsense-ros/realsense2_camera/cmake_install.cmake")
+  include("/home/racecar/Image/catkin_ws/build/ydlidar_ros/cmake_install.cmake")
 
 endif()
 
