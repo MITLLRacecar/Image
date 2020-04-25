@@ -3,6 +3,8 @@
   <include file="$(find realsense2_camera)/launch/rs_camera.launch">
     <arg name="initial_reset" value="true"/>
   </include>
+  <include file="$(find ydlidar_ros)/launch/X4.launch">
+  </include>
   <node pkg="joy" type="joy_node" name="joy_node" />
   <node pkg="racecar" name="pwm" type="pwm.py" output="screen" />
   <!-- <node pkg="racecar" name="color_camera" type="color_camera.py" output="screen" /> -->
